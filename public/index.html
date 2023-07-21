@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Real-Time Output Intel Core i9-13900KS</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="logolinux.png/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="logolinux.png/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="logolinux.png/favicon-16x16.png">
+  <link rel="manifest" href="logolinux.png/site.webmanifest">
+  <link rel="mask-icon" href="logolinux.png/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="logolinux.png/favicon.ico">
+  <style>
+    body {
+      background-color: #292929;
+      color: #f1f1f1;
+      font-family: monospace;
+      padding: 20px;
+    }
+
+    #navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    #navbar img {
+      height: 40px;
+      width: auto;
+    }
+
+    #navbar .links {
+      display: flex;
+    }
+
+    #navbar .links a {
+      color: #f1f1f1;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    #terminal {
+      position: relative;
+      background-color: #000;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      overflow-y: scroll;
+      height: 400px;
+      margin-bottom: 20px;
+    }
+
+    #terminal::before {
+      content: "Terminal - Linux";
+      position: absolute;
+      top: -20px;
+      left: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    #terminal pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      color: #f1f1f1;
+    }
+
+    .cmd {
+      color: #8ae234; /* Green */
+    }
+
+    .error {
+      color: #ef2929; /* Red */
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome library -->
+</head>
+<body>
+  <div id="navbar">
+    <a href="https://github.com/TukangM" target="_blank"><i class="fab fa-github fa-2x" style="color: #f1f1f1;"></i></a> <!-- GitHub Icon and Link -->
+    <div class="links">
+      <a href="http://example.com">Example Link 1</a>
+      <a href="http://example.com">Example Link 2</a>
+    </div>
+  </div>
+  <div id="terminal">
+    <pre id="output"></pre>
+  </div>
+  <div>
+    <iframe height="80px" width="300px" frameborder="0" src="https://livecounts.io/embed/youtube-live-subscriber-counter/UCldeWv7E4nseH3nRNyfw7-A" style="border: 0; width:300px; height:80px;"></iframe>
+  </div>
+  <script>
+    function formatOutput(log) {
+      // Remove the initial ANSI escape codes from the log
+      log = log.replace(/\u001b\[1;31m~\u001b\[1;37m>\s/g, '~&gt; ');
+
+      // Replace ANSI escape codes with appropriate CSS styles
+      log = log.replace(/\u001b\[1;31m~\u001b\[1;37m>\s\u001b\[1;32m CMD \u001b\[1;37m]/g, '<span class="cmd">[CMD]</span>');
+      log = log.replace(/\u001b\[1;31m(.+?)\u001b\[0m/g, '<span class="cmd">$1</span>');
+      log = log.replace(/\u001b\[1;32m CMD \u001b\[1;37m]/g, '<span class="cmd">CMD</span>');
+      log = log.replace(/\[/g, ''); // Remove extra opening brackets
+
+
+      return log;
+    }
+
+    function getConsoleLog() {
+      fetch('console.log')
+        .then(response => response.text())
+        .then(log => {
+          const outputPre = document.getElementById('output');
+          outputPre.innerHTML = formatOutput(log);
+          pageScroll(); // Call the pageScroll function for scrolling
+        })
+        .catch(error => console.error(error))
+        .finally(() => {
+          setTimeout(getConsoleLog, 2000); // Fetch log every 2 seconds
+        });
+    }
+
+    function pageScroll() {
+      const terminal = document.getElementById('terminal');
+      terminal.scrollTop = terminal.scrollHeight;
+    }
+
+    getConsoleLog();
+  </script>
+</body>
+</html>
