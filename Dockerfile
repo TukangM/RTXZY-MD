@@ -1,19 +1,22 @@
 FROM node:lts-buster
 
+# Update package lists
 RUN apt-get update && \
-  apt-get install -y \
-  ffmpeg \
-  imagemagick \
-  webp && \
-  apt-get upgrade -y && \
-  rm -rf /var/lib/apt/lists/*
+    apt-get upgrade -y && \
+    apt-get install -y curl
 
-COPY package.json .
+# Install Node.js
+RUN apt-get install -y nodejs
 
-RUN npm install && npm install qrcode-terminal
+# Install ffmpeg, imagemagick, and webp
+RUN apt-get install -y ffmpeg imagemagick webp
 
+# Copy package.json and install dependencies
 COPY . .
+RUN npm i
 
+
+# Expose port
 EXPOSE 5000
 
-CMD ["node", "index.js", "--autoread"]
+CMD ["node", "haruka.js"]
