@@ -8,7 +8,7 @@ let handler = async (m, { conn, participants, groupMetadata, text }) => {
         return admins
     }
 
-    let pp = 'https://aemt.me/file/C4j9GWChVurR.jpg'
+    let pp = './src/avatar_contact.png'
     try {
         pp = await conn.getProfilePicture(m.chat)
     } catch (e) {

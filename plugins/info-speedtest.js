@@ -20,7 +20,7 @@ extendedTextMessage:{
                         mediaType: 1,
                         previewType: 0,
                         renderLargerThumbnail: true,
-                        thumbnailUrl: 'https://telegra.ph/file/ec8cf04e3a2890d3dce9c.jpg',
+                        thumbnailUrl: 'https://github.com/TukangM/RTXZY-MD/assets/91467886/03c1c8df-705e-48f1-9c97-a229732b22a1',
                         sourceUrl: ''
                     }
                 }, mentions: [m.sender]

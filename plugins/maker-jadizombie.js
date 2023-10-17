@@ -1,5 +1,6 @@
-const uploadImage = require('../lib/uploadImage');
 const fetch = require("node-fetch");
+const FormData = require('form-data');
+const { fromBuffer } = require('file-type');
 let handler = async (m, { 
 conn, 
 usedPrefix, 
@@ -11,7 +12,7 @@ command
     await conn.reply(m.chat, wait, m)
 		try {
 			const img = await q.download?.()
-			let out = await uploadImage(img)
+			let out = await uploader(img)
 			let old = new Date()
 			let res = await fetch(`https://api.botcahx.live/api/maker/jadizombie?url=${out}&apikey=${btc}`)
 			let convert = await res.json()
@@ -32,3 +33,16 @@ handler.tags = ['maker'];
 handler.premium = false;
 handler.limit = 5;
 module.exports = handler;
+
+async function uploader(buffer) {
+  const { ext } = await fromBuffer(buffer);
+  let form = new FormData();
+  form.append('file', buffer, 'tmp.' + ext);
+  let res = await fetch('https://cdn.btch.bz/upload', {
+    method: 'POST',
+    body: form
+  });
+  let img = await res.json();
+  if (img.error) throw img.error;
+  return 'https://cdn.btch.bz' + img[0].src;
+}
