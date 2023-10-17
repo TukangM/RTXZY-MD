@@ -13,7 +13,7 @@ extendedTextMessage:{
                         mediaType: 1,
                         previewType: 0,
                         renderLargerThumbnail: true,
-                        thumbnailUrl: 'https://telegra.ph/file/aa76cce9a61dc6f91f55a.jpg',
+                        thumbnailUrl: 'https://raw.githubusercontent.com/TukangM/RTXZY-MD/main/photo/broadcast.jpg',
                         sourceUrl: ''
                     }
                 }, mentions: [m.sender]
