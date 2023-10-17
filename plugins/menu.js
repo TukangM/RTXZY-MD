@@ -46,7 +46,7 @@ let tags = {
 const defaultMenu = {
   before: `
 Hi %name
-I am an automated system (WhatsApp Bot) that can help to do something, search and get data / information only through WhatsApp.
+Haiii aku Ashley. Saya adalah bot whatsap diperuntukan untuk digunakan oleh kamu yaa!. jangan lupa donate yaa di https://saweria.co/sayaaep . Eitss... owner suka furry loh sejak 15 oktober 2022.
 
  ◦  *Library:* Baileys
  ◦  *Function:* Assistant
@@ -167,8 +167,8 @@ text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ?
                         mediaType: 1,
                         previewType: 0,
                         renderLargerThumbnail: true,
-                        thumbnailUrl: 'https://raw.githubusercontent.com/TukangM/RTXZY-MD/main/photo/furry%202.png',
-                        sourceUrl: 'https://github.com/TukangM'
+                        thumbnailUrl: 'https://raw.githubusercontent.com/TukangM/RTXZY-MD/main/photo/furry%202.jpg',
+                        sourceUrl: 'https://beacons.ai/tukangm'
                     }
                 }, mentions: [m.sender]
 }}, {})
