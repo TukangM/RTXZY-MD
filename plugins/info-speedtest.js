@@ -20,7 +20,7 @@ extendedTextMessage:{
                         mediaType: 1,
                         previewType: 0,
                         renderLargerThumbnail: true,
-                        thumbnailUrl: 'https://github.com/TukangM/RTXZY-MD/assets/91467886/03c1c8df-705e-48f1-9c97-a229732b22a1',
+                        thumbnailUrl: 'https://github.com/TukangM/RTXZY-MD/blob/main/photo/furry%201.jpeg?raw=true',
                         sourceUrl: ''
                     }
                 }, mentions: [m.sender]

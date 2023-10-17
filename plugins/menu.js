@@ -167,7 +167,7 @@ text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ?
                         mediaType: 1,
                         previewType: 0,
                         renderLargerThumbnail: true,
-                        thumbnailUrl: 'https://github.com/TukangM/RTXZY-MD/blob/main/photo/SAD%20CAT%20DANCE%20__%20ANIMATION%20MEME%200-7%20screenshot.png?raw=true',
+                        thumbnailUrl: 'https://github.com/TukangM/RTXZY-MD/blob/main/photo/furry%202.png?raw=true',
                         sourceUrl: 'https://github.com/TukangM'
                     }
                 }, mentions: [m.sender]
