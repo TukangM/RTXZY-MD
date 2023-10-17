@@ -159,7 +159,7 @@ extendedTextMessage:{
                         mediaType: 1,
                         previewType: 0,
                         renderLargerThumbnail: true,
-                        thumbnailUrl: 'https://telegra.ph/file/ec8cf04e3a2890d3dce9c.jpg',
+                        thumbnailUrl: 'https://raw.githubusercontent.com/TukangM/RTXZY-MD/main/photo/furry%201.jpeg',
                         sourceUrl: ''
                     }
                 }, mentions: [m.sender]
