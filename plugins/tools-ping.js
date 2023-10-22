@@ -159,7 +159,7 @@ extendedTextMessage:{
                         mediaType: 1,
                         previewType: 0,
                         renderLargerThumbnail: true,
-                        thumbnailUrl: 'https://raw.githubusercontent.com/TukangM/RTXZY-MD/main/photo/furry%201.jpeg',
+                        thumbnailUrl: 'https://tukangm.github.io/asset/rtxzy/furry1c.jpg',
                         sourceUrl: ''
                     }
                 }, mentions: [m.sender]

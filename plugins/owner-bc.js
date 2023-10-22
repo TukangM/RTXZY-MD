@@ -13,7 +13,7 @@ extendedTextMessage:{
                         mediaType: 1,
                         previewType: 0,
                         renderLargerThumbnail: true,
-                        thumbnailUrl: 'https://raw.githubusercontent.com/TukangM/RTXZY-MD/main/photo/broadcast.jpg',
+                        thumbnailUrl: 'https://tukangm.github.io/asset/rtxzy/broadcastc.jpg',
                         sourceUrl: ''
                     }
                 }, mentions: [m.sender]
