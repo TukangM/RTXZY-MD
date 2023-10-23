@@ -168,7 +168,7 @@ text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ?
                         previewType: 0,
                         renderLargerThumbnail: true,
                         thumbnailUrl: 'https://tukangm.github.io/asset/rtxzy/furry2c.jpg',
-                        sourceUrl: 'https://beacons.ai/tukangm'
+                        sourceUrl: 'https://tukangm.github.io'
                     }
                 }, mentions: [m.sender]
 }}, {})
