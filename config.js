@@ -10,8 +10,8 @@ global.wm = '© Copyright rights reversed TukangM / AEP'
 global.wait = '_*Tunggu sedang di proses...*_'
 global.eror = '_*Server Error*_'
 global.stiker_wait = '*⫹⫺ Stiker sedang dibuat...*'
-global.packname = 'Ashley'
-global.author = 'Clue... Owner Penyuka Furry sejak 15 oktober 2022. OwO. Bot ini berasal dari https://github.com/TukangM. jangan lupa  gunakan bot '
+global.packname = 'Ashley / Furry bot'
+global.author = 'Clue... Owner Penyuka Furry sejak 15 oktober 2022. OwO. EwE, UwU'
 
 //INI WAJIB DI ISI!//
 global.btc = 'TukangM' 
