@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 let handler = async (m, { text, usedPrefix, command }) => {
     if (!text) throw `contoh:\n${usedPrefix + command} prm2.0`
     try {
-        let api = await fetch(`https://api.botcahx.live/api/stalk/ig?username=${text}&apikey=${btc}`)
+        let api = await fetch(`https://api.botcahx.eu.org/api/stalk/ig?username=${text}&apikey=${btc}`)
         let x = await api.json()
         let caption = `▢ *Username*: ${x.result.username}\n▢ *Full Name*: ${x.result.fullName}\n▢ *Bio*: ${x.result.bio}\n▢ *Followers*: ${x.result.followers}\n▢ *Following*: ${x.result.following}\n▢ *Post*: ${x.result.postsCount}
         `

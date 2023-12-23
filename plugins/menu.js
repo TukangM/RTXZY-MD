@@ -33,14 +33,11 @@ let tags = {
   'maker': 'MENU MAKER',
   'owner': 'MENU OWNER',
   'Pengubah Suara': 'PENGUBAH SUARA',
-  'premium': 'PREMIUM MENU',
   'quotes' : 'MENU QUOTES',
   'stalk': 'MENU STALK',
   'shortlink': 'SHORT LINK',
   'tools': 'MENU TOOLS',
   'anonymous': 'ANONYMOUS CHAT',
-  'admin': 'ADMIN', 
-  'bokep': 'FILE', 
   '': 'NO CATEGORY',
 }
 const defaultMenu = {
@@ -48,7 +45,7 @@ const defaultMenu = {
 Hi %name
 Haiii aku Ashley. Saya adalah bot whatsap diperuntukan untuk digunakan oleh kamu yaa!. jangan lupa donate yaa di https://saweria.co/sayaaep . Eitss... owner suka furry loh sejak 15 oktober 2022.
 
- ◦  *Library:* Baileys
+ ◦  *Library:* github.com/WhiskeySockets/Baileys
  ◦  *Function:* Assistant
  
 ┌  ◦ Uptime : %uptime
@@ -69,7 +66,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
     let { exp, limit, level, role } = global.db.data.users[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
-    let name = await conn.getName(m.sender)
+    let name =  `@${m.sender.split`@`[0]}`
     let d = new Date(new Date + 3600000)
     let locale = 'id'
     const wib = moment.tz('Asia/Jakarta').format("HH:mm:ss")
@@ -162,6 +159,7 @@ text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ?
   extendedTextMessage:{
                 text: text, 
                 contextInfo: {
+                mentionedJid: [m.sender],
                      externalAdReply: {
                         title: date,
                         mediaType: 1,
@@ -185,7 +183,7 @@ handler.exp = 3
 
 module.exports = handler
 
-const more = String.fromCharCode(8206)
+
 function clockString(ms) {
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60

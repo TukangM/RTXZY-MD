@@ -1,10 +1,10 @@
 const fetch = require('node-fetch');
 const handler = async (m, { text, usedPrefix, command }) => {
   if (!text) {
-    throw `Masukkan Domain/Sub Domain!\n\n*Contoh:* botcahx.live`;
+    throw `Masukkan Domain/Sub Domain!\n\n*Contoh:* botcahx.eu.org`;
   }
   if (text.includes('https://') || text.includes('http://')) {
-    throw `Tolong masukkan domain/sub domain secara lengkap. Contoh: botcahx.live`;
+    throw `Tolong masukkan domain/sub domain secara lengkap. Contoh: botcahx.eu.org`;
   }
   const options = {
     method: 'GET',

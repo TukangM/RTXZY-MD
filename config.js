@@ -12,19 +12,21 @@ global.eror = '_*Server Error*_'
 global.stiker_wait = '*⫹⫺ Stiker sedang dibuat...*'
 global.packname = 'Ashley / Furry bot'
 global.author = 'Clue... Owner Penyuka Furry sejak 15 oktober 2022. OwO. EwE, UwU'
+global.maxwarn = '3' // Peringatan maksimum
 
 //INI WAJIB DI ISI!//
 global.btc = 'TukangM' 
-//Daftar terlebih dahulu https://api.botcahx.live
+//Daftar terlebih dahulu https://api.botcahx.eu.org
 
-global.lann = 'vWfIcofq'
-//Daftar terlebih dahulu https://api.betabotz.org 
+//INI OPTIONAL BOLEH DI ISI BOLEH JUGA ENGGA//
+global.lann = 'YOUR_APIKEY_HERE'
+//Daftar https://api.betabotz.eu.org 
 
 global.APIs = {   
-  btc: 'https://api.botcahx.live'
+  btc: 'https://api.botcahx.eu.org'
 }
 global.APIKeys = { 
-  'https://api.botcahx.live': 'Apikey' 
+  'https://api.botcahx.eu.org': 'APIKEY' 
 }
 
 let fs = require('fs')

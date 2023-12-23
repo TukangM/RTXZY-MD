@@ -20,8 +20,8 @@ extendedTextMessage:{
                         mediaType: 1,
                         previewType: 0,
                         renderLargerThumbnail: true,
-                        thumbnailUrl: 'https://raw.githubusercontent.com/TukangM/RTXZY-MD/snapshot2/photo/furry%201.jpeg',
-                        sourceUrl: 'https://github.com/TukangM'
+                        thumbnailUrl: 'https://telegra.ph/file/ec8cf04e3a2890d3dce9c.jpg',
+                        sourceUrl: ''
                     }
                 }, mentions: [m.sender]
 }}, {})

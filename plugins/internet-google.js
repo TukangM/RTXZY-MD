@@ -10,7 +10,7 @@ let handler = async (m, { conn, command, args }) => {
     return `*${title}*\n_${link}_\n_${snippet}_`
   }).join`\n\n`
   try {
-    var logos = 'https://telegra.ph/file/cf62f2b8648a352548978.jpg'
+    var logos = 'https://tukangm.github.io/asset/rtxzy/google.jpg'
 	conn.sendFile(m.chat, logos, 'logos.jpg', url + '\n\n' + msg, m)
   } catch (e) {
     m.reply(msg)

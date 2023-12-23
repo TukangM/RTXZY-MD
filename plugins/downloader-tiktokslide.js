@@ -1,14 +1,14 @@
 const fetch = require('node-fetch');
 let handler = async (m, { conn, args, usedPrefix, command }) => {
   if (!args[0]) {
-    throw `Masukkan URL!\n\ncontoh:\n${usedPrefix + command} https://vt.tiktok.com/ZSLx6qhwM`;
+    throw `Masukkan URL!\n\ncontoh:\n${usedPrefix + command} https://vt.tiktok.com/ZSNbrfcGw/`;
   }
     if (!args[0].match(/tiktok/gi)) {
       throw `URL Tidak Ditemukan!`;
     }
     m.reply('*Mohon tunggu...*');
     try {
-    const api = await fetch(`https://api.botcahx.live/api/download/tiktokslide?url=${args[0]}&apikey=${btc}`);
+    const api = await fetch(`https://api.botcahx.eu.org/api/download/tiktokslide?url=${args[0]}&apikey=${btc}`);
     const res = await api.json();
     var {
       id, 

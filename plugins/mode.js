@@ -15,7 +15,7 @@ extendedTextMessage:{
                         mediaType: 1,
                         previewType: 0,
                         renderLargerThumbnail: true,
-                        thumbnailUrl: 'https://telegra.ph/file/dc5a67d724b016574129b.jpg',
+                        thumbnailUrl: 'https://tukangm.github.io/asset/rtxzy/furry2c.jpg',
                         sourceUrl: ''
                     }
                 }, mentions: [m.sender]

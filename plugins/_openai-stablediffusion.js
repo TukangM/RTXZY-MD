@@ -5,9 +5,9 @@ let handler = async (m, { text, conn, usedPrefix, command }) => {
   if (!text) throw `Masukkan teks untuk diubah menjadi gambar\n*Contoh:* ${usedPrefix}${command} 1girl, blush, looking to viewer, warm smile`;
   if (!text.includes(',')) throw `Tolong gunakan prompt dengan benar. Gunakan koma *[ , ]* untuk memisahkan argumen.\n*Contoh:* ${usedPrefix}${command} 1girl, blush, looking to viewer, warm smile`;  
   const prompt = text.split(',').join(', ');
-  const response = await fetch(`https://api.botcahx.live/api/search/openai-image?text=${prompt}&apikey=${btc}`);
+  const response = await fetch(`https://api.botcahx.eu.org/api/search/stablediffusion?text=${text}&apikey=${btc}`);
   const buffer = await response.buffer();
-  const saveFilename = path.join(__dirname, '../tmp/stablediffusion.png');
+  const saveFilename = path.join(__dirname, '../tmp/stablediffusion.jpg');
   writeFileSync(saveFilename, buffer);
   conn.sendFile(m.chat, saveFilename, null, `*Result For:* _${prompt}_`, m);
 };

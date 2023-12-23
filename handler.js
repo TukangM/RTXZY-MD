@@ -264,7 +264,7 @@ module.exports = {
                     exp: 0,
                     coin: 0,
                     atm: 0,
-                    limit: 15,
+                    limit: 500,
                     tigame: 999,
                     lastclaim: 0,
                     money: 0,
@@ -710,7 +710,7 @@ module.exports = {
                     for (let user of participants) {
                         let pp = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9mFzSckd12spppS8gAJ2KB2ER-ccZd4pBbw&usqp=CAU'
                         try {
-                            pp = await this.profilePictureUrl(user)
+                             pp = await this.profilePictureUrl(user, 'image')
                         } catch (e) {
                         } finally {
                             text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc.toString()) :
@@ -718,11 +718,12 @@ module.exports = {
                             this.sendMessage(id, {
                             text: text,
                             contextInfo: {
+			    mentionedJid: [user],
                             externalAdReply: {  
                             title: action === 'add' ? 'Selamat Datang' : 'Selamat tinggal',
                             body: global.wm,
                             thumbnailUrl: pp,
-                            sourceUrl: 'https://api.botcahx.live',
+                            sourceUrl: 'https://api.botcahx.eu.org',
                             mediaType: 1,
                             renderLargerThumbnail: true 
                             }}}, { quoted: null})

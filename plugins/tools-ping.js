@@ -159,8 +159,8 @@ extendedTextMessage:{
                         mediaType: 1,
                         previewType: 0,
                         renderLargerThumbnail: true,
-                        thumbnailUrl: 'https://tukangm.github.io/asset/rtxzy/furry1c.jpg',
-                        sourceUrl: ''
+                        thumbnailUrl: 'https://tehttps://tukangm.github.io/asset/rtxzy/furry1c.jpg',
+                        sourceUrl: 'tukangm.github.io'
                     }
                 }, mentions: [m.sender]
 }}, {})

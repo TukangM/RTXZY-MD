@@ -2,8 +2,8 @@ let handler = async m => {
 
 let krtu = `web`
 m.reply(`
-> https://api.botcahx.live
-> https://tiodevhost.my.id
+> https://api.botcahx.eu.org
+> https://tioprm.link
 
 `.trim()) 
 }

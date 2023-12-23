@@ -43,7 +43,6 @@
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^3.0.0",
         "@vitalets/google-translate-api": "^9.0.0",
-        "acrcloud": "^1.4.0",
         "javascript-obfuscator": "^4.0.2",
         "async": "^3.2.4",
         "awesome-phonenumber": "^2.64.0",
@@ -54,6 +53,7 @@
         "cheerio": "^1.0.0-rc.12",
         "colors": "1.4.0",
         "express": "^4.18.2",
+        "didyoumean": "^1.2.2",
         "file-type": "^16.5.3",
         "form-data": "^4.0.0",
         "google-it": "^1.6.3",
@@ -88,8 +88,8 @@
         "wa-sticker-formatter": "^4.3.2",
         "xfarr-api": "^1.0.3",
         "yargs": "^17.5.1",
-        "ytdl-core": "^4.11.5",
+        "ytdl-core": "npm:@distube/ytdl-core@^4.13.3",
         "yt-search": "^2.10.3",
-        "didyoumean": "^1.2.2"
+        "ws": "^8.4.0"
     }
 }
