@@ -13,6 +13,7 @@ global.stiker_wait = '*⫹⫺ Stiker sedang dibuat...*'
 global.packname = 'Ashley / Furry bot'
 global.author = 'Clue... Owner Penyuka Furry sejak 15 oktober 2022. OwO. EwE, UwU'
 global.maxwarn = '3' // Peringatan maksimum
+global.autobio = false // Set true untuk mengaktifkan autobio
 
 //INI WAJIB DI ISI!//
 global.btc = 'TukangM' 

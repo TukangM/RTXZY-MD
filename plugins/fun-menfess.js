@@ -21,8 +21,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
                         mediaType: 1,
                         previewType: 0,
                         renderLargerThumbnail: true,
-                        thumbnailUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyz1dMPkZuNleUyfXPMsltHwKKdVddTf4-A&usqp=CAU',
-                        sourceUrl: ''
+                        thumbnailUrl: 'https://tukangm.github.io/asset/rtxzy/menfess1c.jpg',
+                        sourceUrl: 'sayaaep.github.io'
                     }
                 }
           }}, {}).then(() => {

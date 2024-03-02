@@ -9,7 +9,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
     await m.reply(wait)    
     try {
       let media = await uploader(buffer)
-      let json = await (await fetch(`https://api.botcahx.eu.org/api/search/bard-img?url=${media}&text=${text}&apikey=${btc}`)).json()  
+      let json = await (await fetch(`https://aemt.me/bardimg?url=${media}&text=${text}`)).json()  
       conn.sendMessage(m.chat, { text: json.result }, { quoted: m })
     } catch (err) {
       throw `${eror}`

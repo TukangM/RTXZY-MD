@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 let handler = async (m, { text }) => {
 if (!text) throw `Masukan pertanyaan!`
 try {
-  let res = await fetch(`https://api.botcahx.eu.org/api/search/simsimi?query=${encodeURIComponent(text)}&apikey=${btc}`)
+  let res = await fetch(`https://aemt.me/simi?query=${encodeURIComponent(text)}`)
   let json = await res.json()
   m.reply(json.result)
 } catch (e) {

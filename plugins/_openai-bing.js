@@ -28,7 +28,7 @@ let handler = async (m, {
       throw `*Error:* ${eror}`;
     }
   }
-  if (command == 'bingimg') {
+  /*if (command == 'bingimg') {
     if (!text) throw `Contoh: ${usedPrefix + command} anak berlari menggunakan pakaian merah 3d animation`;
     try {
       m.reply(wait)
@@ -50,12 +50,14 @@ let handler = async (m, {
         await conn.sendFile(m.chat, img, 'bing_img.png', `*PROMPT:* ${text}`, m)
       }
     } catch (error) {
-      throw `Error: ${eror}`
+      throw `${eror}`
     }
-  }
+  }*/
 }
 
-handler.command = handler.help = ['bing', 'bingimg']
+/*handler.command = handler.help = ['bing', 'bingimg']*/
+
+handler.command = handler.help = ['bing']
 handler.tags = ['tools']
 handler.limit = true
 

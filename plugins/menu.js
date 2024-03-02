@@ -43,9 +43,9 @@ let tags = {
 const defaultMenu = {
   before: `
 Hi %name
-Haiii aku Ashley. Saya adalah bot whatsap diperuntukan untuk digunakan oleh kamu yaa!. jangan lupa donate yaa di https://saweria.co/sayaaep . Eitss... owner suka furry loh sejak 15 oktober 2022.
+Haiii aku Ashley. Saya adalah bot whatsap diperuntukan untuk digunakan oleh kamu yaa!. jangan lupa donate yaa di https://saweria.co/sayaaep . Eitss... owner suka furry loh sejak 15 oktober 2022
 
- ◦  *Library:* github.com/WhiskeySockets/Baileys
+ ◦  *Library:* Baileys
  ◦  *Function:* Assistant
  
 ┌  ◦ Uptime : %uptime
@@ -166,7 +166,7 @@ text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ?
                         previewType: 0,
                         renderLargerThumbnail: true,
                         thumbnailUrl: 'https://tukangm.github.io/asset/rtxzy/furry2c.jpg',
-                        sourceUrl: 'https://tukangm.github.io'
+                        sourceUrl: 'https://sayaaep.github.io'
                     }
                 }, mentions: [m.sender]
 }}, {})
