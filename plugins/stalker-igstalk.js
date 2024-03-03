@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 let handler = async (m, { text, usedPrefix, command }) => {
     if (!text) throw `contoh:\n${usedPrefix + command} prm2.0`
     try {
-        let api = await fetch(`https://api.botcahx.eu.org/api/stalk/ig?username=${text}&apikey=${btc}`)
+        let api = await fetch(`https://aemt.me/download/igstalk?username=${text}`)
         let response = await api.json()
         if (response.status) {
             let userInfo = response.result.user_info

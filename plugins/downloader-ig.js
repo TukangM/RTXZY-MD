@@ -4,7 +4,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!args[0]) throw `*Contoh:* ${usedPrefix}${command} https://www.instagram.com/p/ByxKbUSnubS/?utm_source=ig_web_copy_link`
 
     try {
-        const api = await fetch(`https://api.botcahx.eu.org/api/dowloader/igdowloader?url=${args[0]}&apikey=${btc}`)
+        const api = await fetch(`https://aemt.me/download/igdl?url=${args[0]}`)
         const res = await api.json()
 
         const limitnya = 10; // ini jumlah foto yang ingin di kirim ke user (default 10 foto)

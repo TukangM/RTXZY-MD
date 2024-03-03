@@ -9,7 +9,7 @@ try {
   await m.reply(wait)
   var apii = await fetch(`https://aemt.me/bard?text=${text}`)
   var res = await apii.json()
-  await m.reply(res.message)
+  await m.reply(res.result)
 } catch (err) {
   console.error(err)
   throw "Terjadi kesalahan dalam menjawab pertanyaan"
